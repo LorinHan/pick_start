@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { List, InputItem, Radio, WhiteSpace, Button, Picker } from 'antd-mobile';
 import { Toast } from 'antd-mobile';
+import styles from '../../css/login.less';
+import logo from '../../images/logo.png';
 
 const RadioItem = Radio.RadioItem;
   
@@ -87,23 +89,25 @@ class Register extends React.Component{
     }
     render() {
         return (
-            <div>
-                <List>
-                    <InputItem value={this.state.user} onChange={(e) => this.handleChange('user', e)}>用户名</InputItem>
+            <div className={styles.wrapper}>
+                <p>注 册</p>
+                <img src={logo} alt="" className={styles.logo}/>
+                    <InputItem className={styles.input} value={this.state.user} onChange={(e) => this.handleChange('user', e)}>用户名</InputItem>
                     <WhiteSpace></WhiteSpace>
-                    <InputItem value={this.state.pwd} type='password' onChange={(e) => this.handleChange('pwd', e)}>密码</InputItem>
+                    <InputItem className={styles.input} value={this.state.pwd} type='password' onChange={(e) => this.handleChange('pwd', e)}>密码</InputItem>
                     <WhiteSpace></WhiteSpace>
-                    <InputItem value={this.state.surepwd} type='password' onChange={(e) => this.handleChange('surepwd', e)} placeholder='请再次输入您的密码'>确认密码</InputItem>
+                    <InputItem className={styles.input} value={this.state.surepwd} type='password' onChange={(e) => this.handleChange('surepwd', e)} placeholder='请再次输入您的密码'>确认密码</InputItem>
                     <WhiteSpace></WhiteSpace>
                     <Picker
                     data={school}
                     value={this.state.school}
                     cols={1}
                     onChange={this.onChangeSchool}
+                    style={{'backgroundColor': 'rgba(0, 0, 0, 0)'}}
                     >
-                    <List.Item arrow="horizontal">请选择学校</List.Item>
+                    <List.Item arrow="horizontal" className={styles.input}>请选择学校</List.Item>
                     </Picker>
-                    <WhiteSpace></WhiteSpace>
+                    {/* <WhiteSpace></WhiteSpace>
                     <InputItem value={this.state.tel} onChange={(e) => this.handleChange('tel', e)}>手机号码</InputItem>
                     <WhiteSpace></WhiteSpace>
                     <InputItem value={this.state.mail} onChange={(e) => this.handleChange('mail', e)}>邮箱</InputItem>
@@ -115,9 +119,8 @@ class Register extends React.Component{
                     <RadioItem checked={this.state.type=='Boss'} onChange={() => this.handleChange('type', 'Boss')}>商家或组织</RadioItem>
                     <WhiteSpace></WhiteSpace>
                     <RadioItem checked={this.state.type=='genius'} onChange={() => this.handleChange('type', 'genius')}>学生</RadioItem>
-                    <WhiteSpace></WhiteSpace>
-                    <Button type='primary' href='/#/register' onClick={() => this.register()}>注册</Button>
-                </List>
+                    <WhiteSpace></WhiteSpace> */}
+                    <Button style={{'width': '70%', 'borderRadius': 20, 'margin': '5% auto', 'height': 35, 'lineHeight': '35px', 'fontSize': 14, 'color': '#f2f2f2'}} type='primary' href='/#/register' onClick={() => this.register()}>注册</Button>
             </div>
         )
     }

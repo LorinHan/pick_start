@@ -96,7 +96,7 @@ class App extends React.Component{
         })
         if(user) {
             // 'ws://localhost:5000'
-            const socket = io('ws://localhost:5000');
+            const socket = io();
             const me = window.localStorage.getItem('user')
             socket.on(`recmsg${me}`, (data) => {
                 // console.log(data)
@@ -135,9 +135,9 @@ class App extends React.Component{
                             <Route path='/home/goodInfo' exact component={GoodInfo}></Route>
                             <Route path='/home/chat' exact component={Chat}></Route>
                             <Route path='/chatting' exact component={Chatting}></Route>
-                            <Route path='/login' exact component={Logo}></Route>
+                            {/* <Route path='/login' exact component={Logo}></Route> */}
                             <Route path='/login' exact component={Login}></Route>
-                            <Route path='/register' exact component={Logo}></Route>
+                            {/* <Route path='/register' exact component={Logo}></Route> */}
                             <Route path='/register' exact component={Register}></Route>
                             <Route path='/home/me' exact component={Me}></Route>
                         </div>
