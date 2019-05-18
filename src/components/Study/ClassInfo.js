@@ -59,7 +59,7 @@ class ClassInfo extends React.Component{
         return (
             <div>
                 <div className={styles.title}>
-                    <h2><NavLink to='/home/study' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>帮辅专区</NavLink></h2>
+                    <h2><NavLink to="#" onClick={() => {window.history.go(-1)}} exact activeStyle={{color: '#108ee9',fontWeight: 600}}>帮辅专区</NavLink></h2>
                     <h2><NavLink to='/home/mystudy' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>我的发布</NavLink></h2>
                 </div>
                 <div className={styles.classInfo}>

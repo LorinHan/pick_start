@@ -103,7 +103,6 @@ class Register extends React.Component{
                     value={this.state.school}
                     cols={1}
                     onChange={this.onChangeSchool}
-                    style={{'backgroundColor': 'rgba(0, 0, 0, 0)'}}
                     >
                     <List.Item arrow="horizontal" className={styles.input}>请选择学校</List.Item>
                     </Picker>

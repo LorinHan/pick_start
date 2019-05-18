@@ -3,7 +3,6 @@ import { HashRouter, Route, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import './config';
 import { connect } from 'react-redux';
-import Logo from './Logo/Logo.jsx';
 import Footer from './Footer/Footer.js';
 import Home from './Home/Home.js';
 import { NavBar, Icon, Toast } from 'antd-mobile';
@@ -77,6 +76,18 @@ const Me = Loadable({
     loader: () => import('./Me/Me.js'),
     loading: MyLoadingComponent
 })
+const StudyKind = Loadable({
+    loader: () => import('./Study/StudyKind.js'),
+    loading: MyLoadingComponent
+})
+const Public = Loadable({
+    loader: () => import('./Study/Public.js'),
+    loading: MyLoadingComponent
+})
+const PostPublic = Loadable({
+    loader: () => import('./PostStudy/PostPublic.js'),
+    loading: MyLoadingComponent
+})
 
 class App extends React.Component{
     constructor() {
@@ -96,7 +107,7 @@ class App extends React.Component{
         })
         if(user) {
             // 'ws://localhost:5000'
-            const socket = io();
+            const socket = io('ws://localhost:5000');
             const me = window.localStorage.getItem('user')
             socket.on(`recmsg${me}`, (data) => {
                 // console.log(data)
@@ -115,7 +126,7 @@ class App extends React.Component{
                                 <NavBar
                                     mode="light"
                                     icon={<Icon type="left" />}
-                                    style={{'backgroundColor': '#00aaef', 'color': '#fff'}}
+                                    style={{height: 40, 'backgroundColor': '#00aaef', 'color': '#fff'}}
                                     onLeftClick={() => window.history.go(-1)}
                                     rightContent={[
                                         <Icon key="1" type="ellipsis" />,
@@ -124,12 +135,15 @@ class App extends React.Component{
                             </div>}}></Route>
                             <Route path='/home' exact component={Home}></Route>
                             <Route path='/home' component={Footer}></Route>
-                            <Route path='/home/study' exact component={Study}></Route>
+                            <Route path='/home/studyList' exact component={Study}></Route>
+                            <Route path='/home/study' exact component={StudyKind}></Route>
+                            <Route path='/home/CertificateList' exact component={Public}></Route>
                             <Route path='/home/study/superMan' exact component={SuperMan}></Route>
                             <Route path='/home/mystudy' exact component={MyStudy}></Route>
                             <Route path='/home/mystudy/MyClassInfo' exact component={MyClassInfo}></Route>
                             <Route path='/home/study/classInfo' component={ClassInfo}></Route>
                             <Route path='/home/postStudy' exact component={PostStudy}></Route>
+                            <Route path='/home/postPublic' exact component={PostPublic}></Route>
                             <Route path='/home/shopList' exact component={ShopList}></Route>
                             <Route path='/home/shopPut' exact component={ShopPut}></Route>
                             <Route path='/home/goodInfo' exact component={GoodInfo}></Route>

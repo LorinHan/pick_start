@@ -1,0 +1,89 @@
+.classList{
+    position: absolute;
+    width: 72%;
+    height:100%;
+    right: 0;
+    padding: 8px;
+}
+.button{
+    display: inline-block;
+    width: 60%;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #108ee9;
+    border: 1PX solid #108ee9;
+    border-radius: 5px;
+}
+.select{
+    width: 36%;
+    margin-left: 3%;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    background-color: #fff;
+}
+.list > h3{
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.title{
+    width: 100%;
+    height:30px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.title > h2{
+    display: inline-block;
+    width:50%;
+    height:100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+.title > h2:nth-of-type(1)::after{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    content: '';
+    height: 24px;
+    border-right: 1px solid #ccc;
+}
+.infos{
+    width:100%;
+}
+.infoBox{
+    width:100%;
+    height:80px;
+    box-shadow: 0 0 2px #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.infoBox h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.infoBox > span{
+    display: block;
+    width:100%;
+}
+.infoBox div{
+    margin-top: 12px;
+    font-size: 12px;
+    color: #ccc;
+}
+.infoBox .price,
+.start{
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}

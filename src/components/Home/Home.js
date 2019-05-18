@@ -51,12 +51,10 @@ export default class Footer extends React.Component{
 
     render() {
         return (
-            <div>
+            <div className={styles.home}>
                 <Carousel
                     autoplay={true}
                     infinite
-                    // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                    // afterChange={index => console.log('slide to', index)}
                     >
                     {this.state.data.map(val => (
                         <a
@@ -81,7 +79,7 @@ export default class Footer extends React.Component{
                         <div className={styles.workBox}>
                             <Link to='/home/study'>
                                 <i className='iconfont icon-study' style={{color: 'red'}}></i>
-                                <h2>校友帮</h2>
+                                <h2>帮辅客</h2>
                             </Link>  
                         </div>
                         <div className={styles.workBox}>
@@ -115,11 +113,17 @@ export default class Footer extends React.Component{
                             </Link>  
                         </div>
                         <div className={styles.workBox}>
+                            <Link to='/home/shoplist'>
+                                <i className='iconfont icon-icon' style={{color: 'skyblue'}}></i>
+                                <h2>培训直通车</h2>
+                            </Link>  
+                        </div>
+                        {/* <div className={styles.workBox}>
                             <Link to='/home/more'>
                                 <i className='iconfont icon-more' style={{color: 'skyblue'}}></i>
                                 <h2>更多</h2>
                             </Link>  
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.hot}>
                         {this.state.news.map(item => {

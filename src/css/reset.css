@@ -72,3 +72,11 @@ div.am-list-item .am-list-line .am-list-content,
 div.am-list-item .am-input-label{font-size: 12px;width: 30%!important;color: #ddd;}
 div.am-list-item.am-input-item{height: 35px;}
 div.am-list-item{min-height: 30px;}
+div.am-accordion .am-accordion-item .am-accordion-header{
+	font-size: 13px;
+	padding-left: 10px;
+	padding-right: 0;
+}
+div.am-list-item .am-list-line .am-list-content, div.am-list-item .am-input-label{
+	color: #777;
+}

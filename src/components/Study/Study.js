@@ -13,7 +13,7 @@ class Study extends React.Component{
         }
     }
     componentDidMount() {
-        axios.get('/api/infomationList').then((res) => {
+        axios.get('/api/infomationList?kind=4').then((res) => {
             this.props.getList(res.data);
         })
     }
@@ -22,7 +22,7 @@ class Study extends React.Component{
         return (
             <div style={{marginBottom: 50}}>
                 <div className={styles.title}>
-                    <h2><NavLink to='/home/study' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>帮辅专区</NavLink></h2>
+                    <h2><NavLink to='/home/studyList' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>帮辅专区</NavLink></h2>
                     <h2><NavLink to='/home/mystudy' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>我的发布</NavLink></h2>
                 </div>
 
