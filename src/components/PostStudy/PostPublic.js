@@ -119,7 +119,7 @@ export default class PostStudy extends React.Component{
                 >帮辅地点</InputItem>
                 <textarea value={this.state.intro} id="" cols="30" rows="10" onChange={(e) => this.handleInput('intro', e.target.value)} placeholder='帮辅说明（非必填）'></textarea>
                 <WhiteSpace></WhiteSpace>
-                <Button type='primary' onClick={() => this.postInfo()}>确定发布</Button>
+                <Button style={{backgroundColor: 'rgb(252, 154, 0)', color: '#fff'}} onClick={() => this.postInfo()}>确定发布</Button>
             </div>
         )
     }

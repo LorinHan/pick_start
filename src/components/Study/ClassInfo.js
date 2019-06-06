@@ -103,8 +103,8 @@ class ClassInfo extends React.Component{
                         <h2><i className='iconfont icon-tubiaolunkuo_huaban'></i> 同意申请</h2>
                         <p>{this.state.success}</p>
                     </div>
-                    <Button onClick={() => this.apply()} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '50px', height:50, width: '100%', backgroundColor: '#108ee9', color: '#fff', fontSize: 18, marginTop: 10}}>发起申请</Button>
-                    <Link to={`/chatting?user=test`} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '50px', height:50, width: '100%', backgroundColor: '#108ee9', color: '#fff', fontSize: 18, marginTop: 10}}><i className='iconfont icon-6' style={{color:'#fff'}}></i> 联系Ta</Link>
+                    <Button onClick={() => this.apply()} style={{display: 'block', borderRadius: 10, textAlign:'center', lineHeight: '40px', height:40, width: '90%', backgroundColor: '#FC9A00', color: '#fff', fontSize: 16, margin: '10px auto'}}>发起申请</Button>
+                    <Link to={`/chatting?user=test`} style={{display: 'block', borderRadius: 10, textAlign:'center', lineHeight: '40px', height:40, width: '90%', backgroundColor: '#FC9A00', color: '#fff', fontSize: 16, margin: '10px auto'}}><i className='iconfont icon-6' style={{color:'#fff'}}></i> 联系Ta</Link>
                 </div>
             </div>
         )

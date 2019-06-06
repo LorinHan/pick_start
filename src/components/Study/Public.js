@@ -12,9 +12,19 @@ class Public extends React.Component{
     }
 
     componentDidMount() {
-        axios.get('/api/infomationList?kind=Office').then((res) => {
-            this.props.getList(res.data);
-        })
+        var kind = this.props.history.location.search.substring(19);
+        this.props.changeH3('Office');
+        if(kind == '') {
+            axios.get('/api/infomationList?kind=Office').then((res) => {
+                this.props.getList(res.data);
+            })
+        } else {
+            kind = decodeURI(kind);
+            this.props.changeH3(kind);
+            axios.get('/api/infomationList?kind=' + kind).then((res) => {
+                this.props.getList(res.data);
+            })
+        }
     }
 
     render() {
@@ -46,7 +56,7 @@ class Public extends React.Component{
                                         <div>时间：{item.time}</div>
                                         <div>地点：{item.place}</div>
                                         <div className={styles.price}>价格：{item.price == '' || item.price == null ? '无偿' : item.price}</div>
-                                        </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#108ee9'}}>
+                                        </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#FC9A00'}}>
                                         <h3>{item.class}</h3>
                                         <div>时间：{item.time}</div>
                                         <div>地点：{item.place}</div>
@@ -73,6 +83,9 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
+        changeH3(data) {
+            dispatch({'type': 'changeH3', h3: data})
+        },
         getList(data) {
             dispatch({'type': 'getinfoList', data: data})
         }

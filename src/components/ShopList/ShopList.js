@@ -19,7 +19,7 @@ class ShopList extends React.Component{
     render() {
         return (
             <div>
-                <Button className={styles.getInfo} type='primary' style={{margin: 10}} href='/#/home/shopPut'><i className='iconfont icon-buygift'></i> 上传闲置物品</Button>
+                <Button className={styles.getInfo} type='default' style={{margin: 10, backgroundColor: '#FC9A00', color: '#ffffff'}} href='/#/home/shopPut'><i className='iconfont icon-buygift'></i> 上传闲置物品</Button>
                 <div className={styles.shopBox}>
                     {this.props.data.map(item => {
                         return (

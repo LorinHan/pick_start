@@ -32,7 +32,7 @@ class CertificateList extends React.Component{
     }
 
     onChange = (key) => {
-        console.log(key);
+        // console.log(key);
     }
     getList = (kind) => {
         axios.get('/api/infomationList?kind=' + kind).then((res) => {

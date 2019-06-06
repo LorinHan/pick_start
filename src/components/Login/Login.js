@@ -28,7 +28,14 @@ class Login extends React.Component{
         })
     }
 
-    
+    componentDidMount() {
+        // QC.Login({
+        //     btnId:"qqLoginBtn",
+        //     showModal: false
+        // }, res => {
+        //     console.log(res);
+        // })
+    }
 
     render() {
         return (

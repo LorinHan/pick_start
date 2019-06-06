@@ -1,8 +1,7 @@
-.home{background-color: #f0f0f0;}
 .mainWorks{
     width: 100%;
     overflow: hidden;
-    margin: 10px 0;
+    margin-bottom: 10px;
     background-color: #fff;
 }
 .workBox{
@@ -91,6 +90,8 @@
     line-height: 30px;
     margin: 5px 10px;
     font-size: 14px;
+    background-color: #FC9A00;
+    color: #ffffff;
 }
 .postStudy{margin-bottom: 60px;}
 .postStudy h1{
@@ -114,7 +115,7 @@
     font-size: 14px;
     overflow: hidden;
 }
-.classInfo i{font-size: 16px;color: #108ee9;}
+.classInfo i{font-size: 16px;color: rgb(252, 154, 0);}
 .classInfo .classinfoBox{
     width:100%;
     line-height: 30px;
@@ -178,46 +179,72 @@
 
 .hot{
     width:100%;
+    padding: 10px;
 }
-.hot > .news_item{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    border-bottom: 1px solid #ccc;
-}
-.hot .news_title{
-    font-size: 16px;
-    line-height: 24px;
-    height: 48px;
-    color: rgb(34, 34, 34);
-    text-overflow: ellipsis;
+.hot > .hotBox{
+    width: 100%;
+    padding: 10px;
+    clear: both;
     overflow: hidden;
+    border-bottom: 3px solid #FC9A00;
+    margin-bottom: 15px;
 }
-.hot .imgs{
-    width:100%;
-    height: 80px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.hotBox > h3:before{
+    content: ' ';
+    display: block;
+    float: left;
+    width:4px;
+    height:15px;
+    background-color: #FC9A00;
+    margin-right: 10px;
+    border-radius: 1px;
 }
-.hot .imgs > div{
-    height:100%;
-    flex: 1 1 0px;
-    border-radius: 6px;
-    margin: 2px;
+.hotBox > h3{
+    line-height: 16px;
+    float: left;
 }
-.hot .imgs img{width:100%; height: 100%; flex: 1 1 0px;}
+.moreClass{
+    float: right;
+    color: #666;
+    font-size: 12px;
+}
+.classList{
+    clear: both;
+}
+.hotBoxItem{
+    margin-top: 15px;
+    margin-bottom: 40px;
+    float: left;
+    display: block;
+    width: 48%;
+    height:80px;
+}
+.hotBoxItem:nth-child(odd){
+    margin-right: 4%;
+}
+.hotBoxItem > a > p{margin-top: 5px;color: #000;font-size: 12px;}
+.hotBoxItem > a > span{float: right;font-size: 10px;color: #666;margin-top: 5px;}
+.hotBoxItem > a,
+.hotBoxItem > a > img{width:100%;height:100%;border-radius: 5px;}
+.hotBoxItem > a > span > i{font-size: 12px; color: #FC9A00;}
+
 .more{
     width:100%;
     height:50px;
     color: #ccc;
-    font-size: 20px;
+    font-size: 12px;
     margin: 10px 0 40px 0;
     text-align: center;
 }
 .more:active{
     font-weight: 600;
     color: #108ee9;
+}
+
+.carouselBox{
+    width: 90%;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
 }

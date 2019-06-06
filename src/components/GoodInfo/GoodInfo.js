@@ -78,7 +78,7 @@ class GoodInfo extends React.Component{
                             </tr>
                         </tbody>
                     </table>
-                    <Link to={`/chatting?user=${this.props.data.user}`} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '50px', height:50, width: '100%', backgroundColor: '#108ee9', color: '#fff', fontSize: 18}}><i className='iconfont icon-6'></i> 联系Ta</Link>
+                    <Link to={`/chatting?user=${this.props.data.user}`} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '40px', height:40, width: '90%', backgroundColor: 'rgb(252, 154, 0)', color: '#fff', fontSize: 18, margin: '10px auto'}}><i className='iconfont icon-6'></i> 联系Ta</Link>
                 </div>
             </div>
         )

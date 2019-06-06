@@ -26,8 +26,11 @@ export default function LoginUI(props) {
                     <span></span>
                 </div>
                 <div className={styles.icon}>
-                    <i className='iconfont icon-weixin' style={{'color': '#00c900'}}></i>
-                    <i className='iconfont icon-qq' style={{'color': '#5eabdf'}}></i>
+                    <a href="#"><i className='iconfont icon-weixin' style={{'color': '#00c900'}}></i></a>
+                    <a onClick={() => {
+                        // return window.location.href = 'https://graph.qq.com/oauth2.0/authorize?client_id=101583840&response_type=token&scope=all&redirect_uri=http%3A%2F%2Fwww.uncleLorin.cn%3A5000%2F%23%2Fhome', 'oauth2Login_10742' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes';
+                        return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=101583840&response_type=token&scope=all&redirect_uri=http%3A%2F%2Fwww.uncleLorin.cn%3A5000%2F%23%2Fhome', 'oauth2Login_10742' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=no');
+                    }}><i className='iconfont icon-qq' style={{'color': '#5eabdf'}}></i></a>
                 </div>
             </WingBlank>
         </div>

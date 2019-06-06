@@ -26,7 +26,7 @@ class Study extends React.Component{
                     <h2><NavLink to='/home/mystudy' exact activeStyle={{color: '#108ee9',fontWeight: 600}}>我的发布</NavLink></h2>
                 </div>
 
-                <h2><Button href='/#home/postStudy' type='primary' className={styles.postBtn}>发布信息</Button></h2>
+                <h2><Button href='/#home/postStudy' className={styles.postBtn}>发布信息</Button></h2>
                 <SearchBar placeholder="搜索课程名称" maxLength={8} onSubmit={(e) => {if(e == '') {
                     return axios.get('/api/infomationList').then((res) => {
                         this.props.getList(res.data);
@@ -45,7 +45,7 @@ class Study extends React.Component{
                                 <div>时间：{item.time}</div>
                                 <div>地点：{item.place}</div>
                                 <div className={styles.price}>价格：{item.price == '' || item.price == null ? '无偿' : item.price}</div>
-                                </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#108ee9'}}>
+                                </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#FC9A00'}}>
                                 <h3>{item.class}</h3>
                                 <div>时间：{item.time}</div>
                                 <div>地点：{item.place}</div>

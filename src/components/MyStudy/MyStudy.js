@@ -42,7 +42,7 @@ export default class MyStudy extends React.Component{
                                 <div>时间：{item.time}</div>
                                 <div>地点：{item.place}</div>
                                 <div className={styles.price}>价格：{item.price == '' || item.price == null ? '无偿' : item.price}</div>
-                                </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#108ee9'}}>
+                                </Badge> : <Badge text={'辅'} corner style={{backgroundColor: '#FFE508'}}>
                                 <h3>{item.class}</h3>
                                 <div>时间：{item.time}</div>
                                 <div>地点：{item.place}</div>

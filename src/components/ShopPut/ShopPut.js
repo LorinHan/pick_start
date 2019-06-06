@@ -111,7 +111,7 @@ class ShopPut extends React.Component{
               <WhiteSpace></WhiteSpace>
               <InputItem value={this.state.address} onChange={(e) => this.handleChange('address', e)}>交易地点</InputItem>
               <WhiteSpace></WhiteSpace>
-              <Button type='primary' onClick={() => this.goodsPost()}>提交</Button>
+              <Button style={{backgroundColor: 'rgb(252, 154, 0)', color: '#fff'}} onClick={() => this.goodsPost()}>提交</Button>
               </div>
             );
     }

@@ -3,9 +3,10 @@ import { HashRouter, Route, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import './config';
 import { connect } from 'react-redux';
+import Header from './Header/Header'
 import Footer from './Footer/Footer.js';
 import Home from './Home/Home.js';
-import { NavBar, Icon, Toast } from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 import axios from 'axios';
 import io from 'socket.io-client';
 
@@ -107,7 +108,7 @@ class App extends React.Component{
         })
         if(user) {
             // 'ws://localhost:5000'
-            const socket = io('ws://localhost:5000');
+            const socket = io();
             const me = window.localStorage.getItem('user')
             socket.on(`recmsg${me}`, (data) => {
                 // console.log(data)
@@ -123,15 +124,7 @@ class App extends React.Component{
                                 <Redirect to='/home'></Redirect>}>
                             </Route>
                             <Route path='/home' render={() => {return <div>
-                                <NavBar
-                                    mode="light"
-                                    icon={<Icon type="left" />}
-                                    style={{height: 40, 'backgroundColor': '#00aaef', 'color': '#fff'}}
-                                    onLeftClick={() => window.history.go(-1)}
-                                    rightContent={[
-                                        <Icon key="1" type="ellipsis" />,
-                                    ]}
-                                    >校友一帮一</NavBar>
+                                <Header></Header>
                             </div>}}></Route>
                             <Route path='/home' exact component={Home}></Route>
                             <Route path='/home' component={Footer}></Route>

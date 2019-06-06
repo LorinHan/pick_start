@@ -147,7 +147,7 @@ export default class MyClassInfo extends React.Component{
                         <h2><i className='iconfont icon-tubiaolunkuo_huaban'></i> 同意申请</h2>
                         <p>{this.state.success.substring(1)}</p>
                     </div>
-                    <Button onClick={() => this.finish()} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '50px', height:50, width: '100%', backgroundColor: 'red', color: '#fff', fontSize: 18, marginTop: 10}}>结束帮辅并评价</Button>
+                    <Button onClick={() => this.finish()} style={{display: 'block', borderRadius: 15, textAlign:'center', lineHeight: '40px', height:40, width: '90%', margin: '10px auto', backgroundColor: 'rgb(252, 154, 0)', color: '#fff', fontSize: 16}}>结束帮辅并评价</Button>
                 </div>
 
                 {this.state.show ? 
@@ -158,7 +158,7 @@ export default class MyClassInfo extends React.Component{
                     <p>帮辅人数：{this.state.getUser[1] ? this.state.getUser[1].help : '0'}人</p>
                     <p>帮辅星：{this.state.getUser[1] ? this.state.getUser[1].start : '0'}颗</p>
                     <p>帮辅指数：{this.state.getUser[1] ? (this.state.getUser[1].start / (this.state.getUser[1].help*15) * 100).toFixed(2) : '0'}分</p>
-                    <Button type='primary' onClick={() => this.agree(this.state.getUser[0])}>同意申请</Button>
+                    <Button style={{backgroundColor: 'rgb(252, 154, 0)', color: '#fff'}} onClick={() => this.agree(this.state.getUser[0])}>同意申请</Button>
                 </div>
                 : null}
 
@@ -174,7 +174,7 @@ export default class MyClassInfo extends React.Component{
                     <p className='my'>满意程度： {this.state.xxx.map((item, index) => {
                         return (<span key={index} className='wjx' onClick={() => this.wjx('my', index)}>☆</span>)
                     })}</p>
-                    <Button type='primary' onClick={() => this.scoreAdd()}>确定</Button>
+                    <Button style={{backgroundColor: 'rgb(252, 154, 0)', color: '#fff'}} onClick={() => this.scoreAdd()}>确定</Button>
                 </div>
                 : null}
             </div>
